@@ -1,0 +1,9 @@
+[project]
+name = "simple-project"
+version = "0.1.0"
+description = "A basic uv project with intentionally vulnerable dependencies"
+requires-python = ">=3.12"
+dependencies = [
+  "urllib3==1.24.3",
+  "jinja2==2.11.2",
+]
