@@ -1,0 +1,24 @@
+[project]
+name = "workspace-project"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+dependencies = [
+  "package_a",
+  "package_b",
+  "jinja2==2.11.2",
+  "json5>=0.12.2",
+  "ruff>=0.14.14",
+]
+
+[tool.uv.workspace]
+members = ["packages/*"]
+exclude = ["packages/package_d"]
+
+[tool.uv.sources]
+package_a = { workspace = true }
+package_b = { workspace = true }
+package_c = { workspace = true }
+
+[dependency-groups]
+dev = ["pytest"]
