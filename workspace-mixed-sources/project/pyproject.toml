@@ -1,0 +1,12 @@
+[project]
+name = "scanner-project"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = ["member-a", "member-b"]
+
+[tool.uv.workspace]
+members = ["member-a", "member-b"]
+
+[tool.uv.sources]
+member-a = { workspace = true }
+member-b = { workspace = true }

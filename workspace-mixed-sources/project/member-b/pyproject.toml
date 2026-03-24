@@ -1,0 +1,14 @@
+[project]
+name = "member-b"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = ["local-lib", "beautifulsoup4", "python-dateutil"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv.sources]
+local-lib = { path = "../libs/local-lib" }
+beautifulsoup4 = { url = "https://files.pythonhosted.org/packages/b1/fe/e8c672695b37eecc5cbf43e1d0638d88d66ba3a44c4d321c796f4e59167f/beautifulsoup4-4.12.3-py3-none-any.whl" }
+python-dateutil = { path = "../vendor/python_dateutil-2.9.0.post0-py2.py3-none-any.whl" }

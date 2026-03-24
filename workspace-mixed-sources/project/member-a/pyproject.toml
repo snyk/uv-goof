@@ -1,0 +1,13 @@
+[project]
+name = "member-a"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = ["iniconfig>=1", "external-lib", "markdown-it-py"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv.sources]
+external-lib = { path = "../../external-lib", editable = false }
+markdown-it-py = { git = "https://github.com/executablebooks/markdown-it-py", tag = "v3.0.0" }
